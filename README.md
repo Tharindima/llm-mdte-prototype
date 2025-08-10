@@ -19,13 +19,13 @@ This project demonstrates a prototype for automated software test generation usi
    ```bash
    git clone https://github.com/yourusername/llm-mdte-prototype.git
    cd llm-mdte-prototype
-```
+   ```
 
 2. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
-```
+   ```
 
 3. Obtain an OpenAI API key from OpenAI.
 
