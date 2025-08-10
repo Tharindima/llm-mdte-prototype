@@ -1,22 +1,42 @@
+import argparse
 from generator import generate_tests_using_llm
 from runner import write_tests_and_run
 
-# Tell it which module to test
-module_name = "sample_app.sample_app"
-functions_to_test = ["add", "divide"]
+def main():
+    parser = argparse.ArgumentParser(description="LLM Test Generator and Runner")
+    parser.add_argument(
+        "-m", "--module", required=True, help="Module name to test (e.g., sample_app.sample_app)"
+    )
+    parser.add_argument(
+        "-f", "--functions", required=True, nargs="+",
+        help="List of function names to generate tests for (space separated)"
+    )
+    parser.add_argument(
+        "--mode", default="demo", choices=["demo", "real"],
+        help="Mode to run test generation: demo (default) or real (OpenAI)"
+    )
+    parser.add_argument(
+        "--model", default="gpt-4o-mini",
+        help="OpenAI model name to use (default: gpt-4o-mini)"
+    )
 
-# Ask the real LLM to write pytest tests
-generated = generate_tests_using_llm(
-    module_name,
-    functions_to_test,
-    mode="real",              
-    model="gpt-4o-mini"       
-)
+    args = parser.parse_args()
 
-# Save and run them
-rc, out, err = write_tests_and_run(".", generated)
+    # Generate tests using provided inputs
+    generated_tests = generate_tests_using_llm(
+        args.module,
+        args.functions,
+        mode=args.mode,
+        model=args.model
+    )
 
-print("Generated tests:\n", generated)
-print("\nPytest output:\n", out)
-if err:
-    print("\nPytest errors:\n", err)
+    # Write tests to file and run pytest
+    rc, out, err = write_tests_and_run(".", generated_tests)
+
+    print("Generated tests:\n", generated_tests)
+    print("\nPytest output:\n", out)
+    if err:
+        print("\nPytest errors:\n", err)
+
+if __name__ == "__main__":
+    main()
