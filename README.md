@@ -25,7 +25,7 @@ This project demonstrates a prototype for automated software test generation usi
 
    ```bash
    pip install -r requirements.txt
-   ```
+```
 
 3. Obtain an OpenAI API key from OpenAI.
 
