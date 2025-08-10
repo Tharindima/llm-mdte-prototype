@@ -21,11 +21,12 @@ This project demonstrates a prototype for automated software test generation usi
    cd llm-mdte-prototype
 
 2. Install dependencies:
+   ```bash
 pip install -r requirements.txt
 
-3. Obtain an OpenAI API key from OpenAI.
+4. Obtain an OpenAI API key from OpenAI.
 
-4. Set your API key as an environment variable:
+5. Set your API key as an environment variable:
 
 On Linux/macOS:
 export OPENAI_API_KEY="your_api_key_here"
