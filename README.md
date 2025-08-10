@@ -17,7 +17,7 @@ This project demonstrates a prototype for automated software test generation usi
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/llm-mdte-prototype.git
+   git clone https://github.com/Tharindima/llm-mdte-prototype.git
    cd llm-mdte-prototype
    ```
 
