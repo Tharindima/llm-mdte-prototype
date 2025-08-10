@@ -52,7 +52,7 @@ This project demonstrates a prototype for automated software test generation usi
 Generate and run tests in real mode:
 
 ```bash
-py run_real.py -m sample_app.sample_app -f add --mode real --model gpt-4o-mini
+python run_real.py -m sample_app.sample_app -f add --mode real --model gpt-4o-mini
 ```
 - -m or --module: The Python module path containing the functions to test (e.g., sample_app.sample_app)
 
