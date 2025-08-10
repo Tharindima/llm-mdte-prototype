@@ -52,8 +52,15 @@ This project demonstrates a prototype for automated software test generation usi
 Generate and run tests in real mode:
 
 ```bash
-python run_real.py
+py run_real.py -m sample_app.sample_app -f add --mode real --model gpt-4o-mini
 ```
+- -m or --module: The Python module path containing the functions to test (e.g., sample_app.sample_app)
+
+- -f or --functions: One or more function names separated by spaces (e.g., add divide)
+
+- --mode: Test generation mode; use demo for sample tests or real to call the OpenAI API (default: demo)
+
+- --model: OpenAI model name for real mode (default: gpt-4o-mini)
 
 ### Web UI
 
