@@ -1,6 +1,3 @@
-Here’s your README snippet **correctly formatted with fenced code blocks** so all commands and code parts are properly shown and highlighted:
-
-````markdown
 # LLM-Powered Model Driven Test Engineering Prototype
 
 ## Overview
