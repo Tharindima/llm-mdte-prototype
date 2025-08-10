@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <title>LLM Test Generator</title>
+</head>
+<body>
+    <h1>LLM Test Generator UI</h1>
+    <form method="post">
+        <label>Module Name: <input name="module_name" value="sample_app.sample_app"></label><br>
+        <label>Functions (comma separated): <input name="functions" value="add,divide"></label><br>
+        <label>Mode:
+            <select name="mode">
+                <option value="demo">Demo (Mock)</option>
+                <option value="real">Real (OpenAI)</option>
+            </select>
+        </label><br><br>
+        <button type="submit">Generate & Run Tests</button>
+    </form>
+
+    {% if generated %}
+    <h2>Generated Tests:</h2>
+    <pre>{{ generated }}</pre>
+
+    <h2>Pytest Output:</h2>
+    <pre>{{ pytest_out }}</pre>
+
+    {% if pytest_err %}
+    <h3>Errors:</h3>
+    <pre>{{ pytest_err }}</pre>
+    {% endif %}
+    {% endif %}
+</body>
+</html>

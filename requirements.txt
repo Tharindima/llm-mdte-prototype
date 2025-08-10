@@ -1,0 +1,4 @@
+flask
+pytest
+# For real OpenAI mode, install:
+# openai   (or the official openai-client package depending on your environment)
