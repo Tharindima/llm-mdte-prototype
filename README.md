@@ -1,3 +1,6 @@
+Here’s your README snippet **correctly formatted with fenced code blocks** so all commands and code parts are properly shown and highlighted:
+
+````markdown
 # LLM-Powered Model Driven Test Engineering Prototype
 
 ## Overview
@@ -19,32 +22,50 @@ This project demonstrates a prototype for automated software test generation usi
    ```bash
    git clone https://github.com/yourusername/llm-mdte-prototype.git
    cd llm-mdte-prototype
+````
 
 2. Install dependencies:
+
    ```bash
-pip install -r requirements.txt
+   pip install -r requirements.txt
+   ```
 
-4. Obtain an OpenAI API key from OpenAI.
+3. Obtain an OpenAI API key from OpenAI.
 
-5. Set your API key as an environment variable:
+4. Set your API key as an environment variable:
 
-On Linux/macOS:
-export OPENAI_API_KEY="your_api_key_here"
+   On Linux/macOS:
 
-On Windows (PowerShell):
-setx OPENAI_API_KEY "your_api_key_here"
+   ```bash
+   export OPENAI_API_KEY="your_api_key_here"
+   ```
+
+   On Windows (PowerShell):
+
+   ```powershell
+   setx OPENAI_API_KEY "your_api_key_here"
+   ```
 
 5. (Optional) Prepare your target Python module to test.
 
 ## Usage
 
 ### Command Line
+
 Generate and run tests in real mode:
+
+```bash
 python run_real.py
+```
 
 ### Web UI
-Start the Flask app:
-python app.py
 
-Open your browser and navigate to http://127.0.0.1:5000.
+Start the Flask app:
+
+```bash
+python app.py
+```
+
+Open your browser and navigate to [http://127.0.0.1:5000](http://127.0.0.1:5000).
 Input your module name, functions, and select mode (demo or real), then generate and run tests interactively.
+
